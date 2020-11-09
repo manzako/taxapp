@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "jonathan",
+    "password": "1234",
+    "database": "taxapp",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "jonathan",
+    "password": "1234",
+    "database": "taxapp",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "jonathan",
+    "password": "1234",
+    "database": "taxapp",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
