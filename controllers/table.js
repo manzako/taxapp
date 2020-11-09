@@ -21,11 +21,3 @@ module.exports.controller = (app) => {
   
  
 };
-
-
-
-
-
-
-
-
