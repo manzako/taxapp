@@ -3,8 +3,8 @@
 
 module.exports.controller = (app) => {
 
-  app.get('/',function (req, res) {
-    res.render('pages/home');
+  app.get('/print',function (req, res) {
+    res.render('pages/print');
   });
 
 

@@ -1,8 +1,8 @@
 //const db = require("../../models");
-
+const checkauth=require('../middleware/check-auth');
 module.exports.controller = (app) => {
     // get form
-    app.get('/form',messages,function (req, res) {
+    app.get('/form',checkauth,messages,function (req, res) {
         res.render('pages/form');
 
     });
@@ -20,9 +20,8 @@ function messages(req,res,next){
     res.locals.message = message;
     next();
 }
-  
+
     //DEBUG=express_app:* npm start
-    
-   
+
+
   };
-  

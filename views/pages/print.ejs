@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="asset/coco/coco.css" rel="stylesheet" type="text/css"/>
+        <link href="asset/css/xcss.css" rel="stylesheet" type="text/css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" type="text/javascript"></script>
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Impression Note de perception</title>
+        <style>
+            @media print {
+                @page { margin: 0; }
+                body { margin: 1.6cm; }
+            }
+            @print{
+                @page :footer {color: #fff }
+                @page :header {color: #fff}
+            }
+            *{
+                font-family:  "Arial", serif;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            @media print {
+                html, body {
+                    width: 210mm;
+                    height: 297mm;
+                }
+                .page {
+                    margin: 0;
+                    border: initial;
+                    border-radius: initial;
+                    width: initial;
+                    min-height: initial;
+                    box-shadow: initial;
+                    background: initial;
+                    page-break-after: always;
+                }
+            }
+
+
+            #documentPrinteble{
+
+                background-repeat: no-repeat;
+                padding: 20px;
+                background-size: 100% 100%;
+                position: relative;
+                overflow: auto;
+                background-position: center -200px;
+                width: 100%;
+                margin-left: center;
+                margin-right: center;
+
+            }
+            .tbanks{
+                border-collapse: collapse;
+                border: none;
+
+            }
+            .tbanks td{
+
+            }
+            td{
+                vertical-align: top;
+                padding: 7px;
+            }
+            #documentHeader{
+                font-size: 8pt;
+            }
+            #documentPrinteble table{
+                border-collapse:  collapse;
+                position: relative;
+                width: 100%;
+                font-size: 12pt;
+            }
+            .documentGras{
+                font-weight: bold;
+            }
+            #document-title{
+                font-weight: bolder;
+                text-align: center;
+                text-decoration: underline;
+            }
+            .subTitle{
+                font-weight: bolder;
+                margin-bottom: 10px;
+                font-size: 13pt;
+            }
+            .subTitleContent{
+
+            }
+            .subTitleContent .lineChamp{
+
+            }
+            .subTitleContent .lineChamp .lineText{
+
+            }
+            .subTitleContent .lineChamp .lineVal{
+
+            }
+            .documentGras{
+                font-weight: bolder;
+
+            }
+            .logoDgrpek{
+                width: 100px;
+                height: 80px;
+                overflow: hidden;
+            }
+            .logoDgrpek img{
+                width: 100%;
+                height: 100%;
+            }
+            #documentPrinteble .rightDate{
+                margin-bottom: 30px;
+                text-align: right;
+            }
+            #documentPrinteble .wrapContentForQr{
+                position: absolute;
+                right: 50px;
+                text-align: center;
+                top: 20px;
+                bottom: 20px;
+            }
+            .wrapContentForQr .wrapQr{
+                width: 90px;
+                height: 90px;
+            }
+            .wrapQr span{
+                width: 80%;
+                height: 80%;
+            }
+            .bottomContent{
+                font-size: 9pt;
+            }
+            .bottomContent *{
+                vertical-align: text-top;
+                font-size: 9pt;
+
+            }
+            .bottomContent table{
+                //font-size: 9pt;
+            }
+            .bottomContent table td{
+                font-size: 9pt;
+                vertical-align: text-top;
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+            .bottomContent table tr{
+                font-size: 9pt;
+                vertical-align: text-top;
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+            .lineChamp:after{
+                content: "  ";
+                margin-right: 10px;
+
+            }
+            #documentPrinteble .hasNext{
+                margin-bottom: 30px;
+            }
+            .repub{
+
+              position:relative;
+              left:-10px;
+            }
+            .divis{
+              padding:0px;
+              margin:0px;
+            }
+
+            .logoK{
+              position:relative;
+              left:90px;
+            }
+            .bur{
+              position:relative;
+              left:100px;
+              padding:0px;
+              margin:0px;
+            }
+            .vill{
+              position:relative;
+              left:110px;
+              padding:0px;
+              margin:0px;
+            }
+            .rdc{
+              position:relative;
+              left:65px;
+              padding:0px;
+              margin:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="documentPrinteble">
+                    <div id="documentHeader">
+                      <div class="repub">
+                        <p class="rdc">République Démocratique du Congo</p><br>
+                        <p class="vill">Ville de Kinshasa</p>
+
+                      </div>
+                        <div class="row logoK">
+                            <div class="col-2">
+                                <div class="logoDgrpek">
+                                    <img alt="" src="asset/imgs/1200px-Coat_of_arms_of_Kinshasa.svg.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divis">
+                          <p>Division Urbaine des Transports et Voies de Communication</p>
+                          <p class="bur">Bureau Engens</p>
+
+                        </div>
+                    <div id="document-title">
+                        <br><br>
+                        <h3>FICHE DE RENSEIGNEMENTS  - N° /DP/003</h3>
+
+                    </div>
+                    </div>
+                    <div id="documentCorps">
+
+                        <div class="documentContent">
+                            <table border="2">
+                                <tr >
+                                    <td width="50%"  colspan="2">
+                                        <div class="subTitle">I. Renseignements relatifs au vehicule </div>
+                                        <div class="subTitleContent" style="padding-bottom: 30px ;">
+                                            <div class="lineText"><span class="lineChamp">Genre :</span><span class="lineVal documentGras">DGPEK</span></div>
+                                            <!--<div class="lineText"><span class="lineChamp">Nbre d'actes :</span><span class="lineVal documentGras"><c:out value="${note.t.nbActe}"/></span></div>-->
+                                            <div class="lineText"><span class="lineChamp">Marque :</span><span class="lineVal documentGras">1122</span></div>
+                                            <div class="lineText"><span class="lineChamp">Type :</span><span class="lineVal documentGras">1122</span></div>
+                                            <div class="lineText"><span class="lineChamp">Couleur :</span><span class="lineVal documentGras">1122</span></div>
+                                            <div class="lineText"><span class="lineChamp">Chassis :</span><span class="lineVal documentGras">1122</span></div>
+                                            <div class="lineText"><span class="lineChamp">Date de Mise en circulation :</span><span class="lineVal documentGras">1122</span></div>
+                                        </div>
+
+
+                                        <div class='subTitle'>II. Renseignements relatifs au proprietaire </div>
+
+                                        <div class='subTitleContent'>
+                                            <div class="lineText"><span class="lineChamp">Nom ou Raison Sociale :</span><span class="lineVal documentGras">Arrété conjoint n° SC / 001 / GPK / CG / CAMCN / 2020 et n° 001 / CAB / MIN / PROV / FINECO &IND / 2020 du 13 janvier 2020 fixant les taux des taxes relatives à la publicité dues à la Ville de Kinshasa</span></div><br>
+                                            <div class="lineText"><span class="lineChamp">Adresse physique N°:</span><span class="lineVal documentGras"></div>
+                                            <div class="lineText"><span class="lineChamp">Commune :</span><span class="lineVal documentGras inLetter">rkrkrkkrkrkr</span></div><br>
+                                            <div class="lineText"><span class="lineChamp">RCCM :</span><span class="lineVal documentGras">vgggbbbb</span></div>
+                                            <div class="lineText"><span class="lineChamp">EMAIL :</span><span class="lineVal documentGras">ednbdbdbdbvd</span></div>
+                                            <div class="lineText"><span class="lineChamp">Numero_Impot :</span><span class="lineVal documentGras">ednbdbdbdbvd</span></div>
+                                            <div class="lineText"><span class="lineChamp">Telephone :</span><span class="lineVal documentGras">ednbdbdbdbvd</span></div>
+                                            <div class="lineText"><span class="lineChamp">A Presenter à conte réquisition des agents de l'etat:</span><span class="lineVal documentGras">hgfgfghfgfg</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" colspan="2" style="position: relative" >
+                                        <div class="subTitle">&nbsp;</div>
+                                        <div class="subTitleContent" style="margin-bottom: 20px">
+                                          <div class="rightDate pull-right">
+                                              <span class="documentDate pull-right">Kinshasa, Le  12/12/2020 </span><br>
+                                          </div>
+                                          <br>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+    </body>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>-->
+
+
+    <script>
+        window.onload(function () {
+            var el = window.document.getElementById('qrNote').innerHTML;
+            window.document.getElementById('qrNote').textContent = '';
+            var qr = new QRCode(document.getElementById("qrNote"), {
+                text: el,
+                width: 90,
+                height: 90,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            qr.makeCode();
+        });
+
+        $(document).ready(
+                function () {
+                    $('body').find('.ttt').find('li').hide();
+                    $('body').find('.ttt').find('li').eq(0).show();
+                }
+        );
+
+    </script>
+
+</html>
