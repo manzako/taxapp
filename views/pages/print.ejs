@@ -215,7 +215,7 @@
                         <div class="row logoK">
                             <div class="col-2">
                                 <div class="logoDgrpek">
-                                    <img alt="" src="asset/imgs/1200px-Coat_of_arms_of_Kinshasa.svg.png"/>
+                                    <img alt="" src="asset/imgs/kinshasavile.png"/>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                         </div>
                     <div id="document-title">
                         <br><br>
-                        <h3>FICHE DE RENSEIGNEMENTS  - N° /DP/003</h3>
+                        <h3>FICHE DE RENSEIGNEMENTS  - N°<%= fiche[0].id %> </h3>
 
                     </div>
                     </div>
@@ -238,27 +238,28 @@
                                     <td width="50%"  colspan="2">
                                         <div class="subTitle">I. Renseignements relatifs au vehicule </div>
                                         <div class="subTitleContent" style="padding-bottom: 30px ;">
-                                            <div class="lineText"><span class="lineChamp">Genre :</span><span class="lineVal documentGras">DGPEK</span></div>
-                                            <!--<div class="lineText"><span class="lineChamp">Nbre d'actes :</span><span class="lineVal documentGras"><c:out value="${note.t.nbActe}"/></span></div>-->
-                                            <div class="lineText"><span class="lineChamp">Marque :</span><span class="lineVal documentGras">1122</span></div>
-                                            <div class="lineText"><span class="lineChamp">Type :</span><span class="lineVal documentGras">1122</span></div>
-                                            <div class="lineText"><span class="lineChamp">Couleur :</span><span class="lineVal documentGras">1122</span></div>
-                                            <div class="lineText"><span class="lineChamp">Chassis :</span><span class="lineVal documentGras">1122</span></div>
-                                            <div class="lineText"><span class="lineChamp">Date de Mise en circulation :</span><span class="lineVal documentGras">1122</span></div>
+                                            <div class="lineText"><span class="lineChamp">Genre :</span><span class="lineVal documentGras"><%= fiche[0].genre %> </span></div>
+                                            <div class="lineText"><span class="lineChamp">Marque :</span><span class="lineVal documentGras"><%= fiche[0].Marque %> </span></div>
+                                            <div class="lineText"><span class="lineChamp">Type :</span><span class="lineVal documentGras"><%= fiche[0].genre %> </span></div>
+                                            <div class="lineText"><span class="lineChamp">Couleur :</span><span class="lineVal documentGras"><%= fiche[0].couleur %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Chassis :</span><span class="lineVal documentGras"><%= fiche[0].chassis %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Puissance Fiscale :</span><span class="lineVal documentGras"><%= fiche[0].puissance_fiscale %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Usage :</span><span class="lineVal documentGras"><%= fiche[0].usage %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Taxi :</span><span class="lineVal documentGras"><%= fiche[0].taxi %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Date de Mise en circulation :</span><span class="lineVal documentGras"><%= fiche[0].date_mise_en_circulation %></span></div>
                                         </div>
 
 
                                         <div class='subTitle'>II. Renseignements relatifs au proprietaire </div>
 
                                         <div class='subTitleContent'>
-                                            <div class="lineText"><span class="lineChamp">Nom ou Raison Sociale :</span><span class="lineVal documentGras">Arrété conjoint n° SC / 001 / GPK / CG / CAMCN / 2020 et n° 001 / CAB / MIN / PROV / FINECO &IND / 2020 du 13 janvier 2020 fixant les taux des taxes relatives à la publicité dues à la Ville de Kinshasa</span></div><br>
-                                            <div class="lineText"><span class="lineChamp">Adresse physique N°:</span><span class="lineVal documentGras"></div>
-                                            <div class="lineText"><span class="lineChamp">Commune :</span><span class="lineVal documentGras inLetter">rkrkrkkrkrkr</span></div><br>
-                                            <div class="lineText"><span class="lineChamp">RCCM :</span><span class="lineVal documentGras">vgggbbbb</span></div>
-                                            <div class="lineText"><span class="lineChamp">EMAIL :</span><span class="lineVal documentGras">ednbdbdbdbvd</span></div>
-                                            <div class="lineText"><span class="lineChamp">Numero_Impot :</span><span class="lineVal documentGras">ednbdbdbdbvd</span></div>
-                                            <div class="lineText"><span class="lineChamp">Telephone :</span><span class="lineVal documentGras">ednbdbdbdbvd</span></div>
-                                            <div class="lineText"><span class="lineChamp">A Presenter à conte réquisition des agents de l'etat:</span><span class="lineVal documentGras">hgfgfghfgfg</span></div>
+                                            <div class="lineText"><span class="lineChamp">Nom ou Raison Sociale :</span><span class="lineVal documentGras"><%= fiche[0].nom_ou_raison_sociale %></span></div><br>
+                                            <div class="lineText"><span class="lineChamp">Adresse physique N°:</span><span class="lineVal documentGras"><%= fiche[0].adresse_physique %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Commune :</span><span class="lineVal documentGras inLetter"><%= fiche[0].commune %></span></div><br>
+                                            <div class="lineText"><span class="lineChamp">RCCM :</span><span class="lineVal documentGras"><%= fiche[0].rccm %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Numero_Impot :</span><span class="lineVal documentGras"><%= fiche[0].numero_impot %></span></div>
+                                            <div class="lineText"><span class="lineChamp">Telephone :</span><span class="lineVal documentGras"><%= fiche[0].telephone %></span></div>
+                                            <div class="lineText"><span class="lineChamp">A Presenter à conte réquisition des agents de l'etat:</span><span class="lineVal documentGras"><%= fiche[0].nom_ou_raison_sociale %></span></div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -266,7 +267,7 @@
                                         <div class="subTitle">&nbsp;</div>
                                         <div class="subTitleContent" style="margin-bottom: 20px">
                                           <div class="rightDate pull-right">
-                                              <span class="documentDate pull-right">Kinshasa, Le  12/12/2020 </span><br>
+                                              <span class="documentDate pull-right">Kinshasa, Le <%= new Date() %> </span><br>
                                           </div>
                                           <br>
                                         </div>
