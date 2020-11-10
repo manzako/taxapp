@@ -1,0 +1,22 @@
+<%- include('../template/head')-%>
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <%- include('../template/nav')-%>
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Fiche Enregistrée</h1>
+
+            <h3><%=uneFiche.id%></h3>
+            <h3><%=uneFiche.genre%></h3>
+            <h3><%=uneFiche.marque%></h3>
+            <h3><%=uneFiche.type%></h3>
+        </main>
+        <%- include('../template/footer')-%>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        document.getElementById('list').classList.add('active');
+      };
+</script>
+</html>
