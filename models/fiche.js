@@ -57,20 +57,14 @@ module.exports = (sequelize, DataTypes) => {
         type:DataTypes.STRING,
       }
     },
-    {
-      hooks: {
-        afterValidate: (employe) => {
-          employe.pwd = bcrypt.hashSync(employe.pwd, 8);
-        },
-      },
-    }
+    
   );
 
-  fiche.associate = (models) => {
+ /*  fiche.associate = (models) => {
     fiche.belongsTo(models.user, {
       onDelete: "cascade",
     });
-  };
+  }; */
 
   return fiche;
 };
