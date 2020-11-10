@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 module.exports = (sequelize, DataTypes) => {
   const fiche = sequelize.define(
-    "employe",
+    "fiche",
     {
       genre: {
         type: DataTypes.STRING,

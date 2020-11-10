@@ -4,15 +4,68 @@
         <%- include('../template/nav')-%>
         <main role="main" class="inner cover">
             <h1 class="cover-heading">Enregistrer Une Fiche</h1>
-            <form method="POST" action="/form">
+            <form method="POST" action="/register">
                 <div class="form-group">
-                    <label for="Name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+                    <label for="genre">genre</label>
+                    <input type="text" class="form-control" id="genre" name="genre" placeholder="Entrer le genre" required>
                 </div>
                 <div class="form-group">
-                    <label for="Surname">Surname</label>
+                    <label for="marque">marque</label>
+                    <input type="text" class="form-control" id="marque" name="marque" placeholder="Entrer la marque" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">type</label>
+                    <input type="text" class="form-control" id="type" name="type" placeholder="Entrer le type" required>
+                </div>
+                <div class="form-group">
+                    <label for="couleur">couleur</label>
+                    <input type="text" class="form-control" id="couleur" name="couleur" placeholder="Entrer la couleur" required>
+                </div>
+                <div class="form-group">
+                    <label for="chassis">chassis</label>
+                    <input type="text" class="form-control" id="chassis" name="chassis" placeholder="Entrer le chassis" required>
+                </div>
+                <div class="form-group">
+                    <label for="puissance_fiscale">puissance_fiscale</label>
+                    <input type="text" class="form-control" id="puissance_fiscale" name="puissance_fiscale" placeholder="Entrer la puissance_fiscale" required>
+                </div>
+                <div class="form-group">
+                    <label for="usage">usage</label>
+                    <input type="text" class="form-control" id="usage" name="usage" placeholder="Entrer l'usage" required>
+                </div>
+                <div class="form-group">
+                    <label for="taxi">taxi</label>
+                    <input type="text" class="form-control" id="taxi" name="taxi" placeholder="Entrer le taxi" required>
+                </div>
+                <div class="form-group">
+                    <label for="Surname">date_mise_en_circulation</label>
+                    <input type="text" class="form-control" id="date_mise_en_circulation" name="date_mise_en_circulation" placeholder="Entrer la date de mise_en_circulation" required>
+                </div>
+                <div class="form-group">
+                    <label for="nom_ou_raison_sociale">nom_ou_raison_sociale</label>
+                    <input type="text" class="form-control" id="nom_ou_raison_sociale" name="nom_ou_raison_sociale" placeholder="Entrer le nom ou raison sociale" required>
+                </div>
+                <div class="form-group">
+                    <label for="rccm">rccm</label>
+                    <input type="text" class="form-control" id="rccm" name="rccm" placeholder="Entrer le rccm" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero_impot">numero_impot</label>
                     <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter Surname" required>
                 </div>
+                <div class="form-group">
+                    <label for="telephone">telephone</label>
+                    <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Entrer le numéro de telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="adresse_physique">adresse_physique</label>
+                    <input type="text" class="form-control" id="adresse_physique" name="adresse_physique" placeholder="Entrer l'adresse physique" required>
+                </div>
+                <div class="form-group">
+                    <label for="Surname">commune</label>
+                    <input type="text" class="form-control" id="commune" name="commune" placeholder="Entrer la commune" required>
+                </div>
+                
                 <button type="submit" class="btn btn-dark">Confirmer</button>
             </form>
         </main>
