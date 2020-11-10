@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "jonathan",
-    "password": "1234",
+    "username": "root",
+    "password": "",
     "database": "taxapp",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,8 +14,8 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "jonathan",
-    "password": "1234",
+    "username": "root",
+    "password": "",
     "database": "taxapp",
     "host": "127.0.0.1",
     "dialect": "mysql"

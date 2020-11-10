@@ -4,12 +4,57 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <%- include('../template/nav')-%>
         <main role="main" class="inner cover">
-            <h1 class="cover-heading">List Example</h1>
-            <ul class="list-group">
-                <%list.forEach(function(entry) {%>
-                <li class="list-group-item text-dark"><%=entry%></li>
-                <%});%>
-            </ul>
+            <h1 class="cover-heading">Liste Fiches Enregistrées</h1>
+            <div  class="jumbotron">
+              <div class="table-responsive">
+  <table class="table">
+    //
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">genre</th>
+        <th scope="col">marque</th>
+        <th scope="col">type</th>
+        <th scope="col">couleur</th>
+        <th scope="col">chassis</th>
+        <th scope="col">puissance_fiscale</th>
+        <th scope="col">usage</th>
+        <th scope="col">taxi</th>
+        <th scope="col">date_mise_en_circulation</th>
+        <th scope="col">nom_ou_raison_sociale</th>
+        <th scope="col">rccm</th>
+        <th scope="col">numero_impot</th>
+        <th scope="col">telephone</th>
+        <th scope="col">adresse_physique</th>
+        <th scope="col">commune</th>
+      </tr>
+    </thead>
+<tbody>
+<%list.forEach(function(entry) {%>
+<tr>
+<th scope="row"><%=entry.id%></th>
+<td><%=entry.genre%></td>
+<td><%=entry.marque%></td>
+<td><%=entry.type%></td>
+<td><%=entry.couleur%></td>
+<td><%=entry.chassis%></td>
+<td><%=entry.puissance_fiscale%></td>
+<td><%=entry.usage%></td>
+<td><%=entry.taxi%></td>
+<td><%=entry.date_mise_en_circulation%></td>
+<td><%=entry.nom_ou_raison_sociale%></td>
+<td><%=entry.rccm%></td>
+<td><%=entry.numero_impot%></td>
+<td><%=entry.telephone%></td>
+<td><%=entry.adresse_physique%></td>
+<td><%=entry.commune%></td>
+</tr>
+      <%});%>
+
+    </tbody>
+  </table>
+</div>
+            </div>
         </main>
         <%- include('../template/footer')-%>
     </div>

@@ -1,17 +1,17 @@
-//const db = require("../../models");
+const db = require("../models");
 
 
 module.exports.controller = (app) => {
 
 
-    app.get('/list',function (req, res) {
+    app.get('/list',async function (req, res) {
         //array with items to send
-        var items = ['node.js','expressjs','ejs','javascript','bootstarp'];
+        const list=await db.fiche.findAll();
         res.render('pages/list',{
-            list:items
+            list:list
         })
     });
   //DEBUG=express_app:* npm start
-  
- 
+
+
 };
