@@ -9,35 +9,55 @@ module.exports.controller = (app) => {
 
 
     app.post('/register', function (req, res) {
-        db.fiche
+
+//nouveaux codes par rapport au frontend
+    });
+
+function createFiche(req) {
+  return new Promise((successCallback, failureCallback) => {
+    try {
+      db.fiche
+      .create({
+        type_personne:req.body.type_personne,
+        nom_ou_raison_sociale:req.body.nom_ou_raison_sociale,
+        rccm:req.body.rccm,
+        numero_impot:req.body.numero_impot,
+        telephone:req.body.telephone,
+        adresse_physique:req.body.adresse_physique,
+        commune:req.body.commune,
+    }).then((result) => {
+          successCallback(result);
+        });
+    } catch (err) {
+      failureCallback(err);
+    }
+  });
+}
+function createVehicule(req, fiche) {
+  return new Promise((successCallback, failureCallback) => {
+    try {
+      db.vehicule
         .create({
           genre:req.body.genre,
           marque:req.body.marque,
           type:req.body.type,
           couleur:req.body.couleur,
           chassis:req.body.chassis,
+          type_personne:req.body.type_personne,
           puissance_fiscale:req.body.puissance_fiscale,
           usage:req.body.usage,
-          taxi:req.body.taxi,
           date_mise_en_circulation:req.body.date_mise_en_circulation,
-          nom_ou_raison_sociale:req.body.nom_ou_raison_sociale,
-          rccm:req.body.rccm,
-          numero_impot:req.body.numero_impot,
-          telephone:req.body.telephone,
-          adresse_physique:req.body.adresse_physique,
-          commune:req.body.commune
-
-      })
-        .then((uneFiche) => {
-          return res.render('pages/show');
+          ficheId:fiche["dataValues"].id,
         })
-        .catch((err) => {
-          return res.status(404).json(err);
+        .then((result) => {
+          successCallback(result);
         });
-        
-    });
+    } catch (err) {
+      failureCallback(err);
+    }
+  });
+}
 
-    
-   
+
+
   };
-  

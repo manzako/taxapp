@@ -5,38 +5,13 @@ module.exports = (sequelize, DataTypes) => {
   const fiche = sequelize.define(
     "fiche",
     {
-      genre: {
-        type: DataTypes.STRING,
+      id:{
+        type: DataTypes.UUID,
+        primaryKey: true,
+        defaultValue:DataTypes.UUIDV1,
       },
-      marque: {
-        type: DataTypes.STRING,
-      },
-      type: {
-        type: DataTypes.STRING,
-        // allowNull defaults to true
-      },
-      couleur: {
-        type: DataTypes.STRING,
-        // allowNull defaults to true
-      },
-      chassis: {
-        type: DataTypes.STRING,
-        // allowNull defaults to true
-      },
-      puissance_fiscale: {
-        type: DataTypes.STRING,
-        // allowNull defaults to true
-      },
-      usage: {
-        type: DataTypes.STRING,
-        // allowNull defaults to true
-      },
-      taxi:{
+      type_personne:{
         type:DataTypes.STRING,
-      },
-      date_mise_en_circulation: {
-        type: DataTypes.STRING,
-        // allowNull defaults to true
       },
       nom_ou_raison_sociale:{
         type:DataTypes.STRING,
@@ -55,16 +30,15 @@ module.exports = (sequelize, DataTypes) => {
       },
       commune:{
         type:DataTypes.STRING,
-      }
+      },
     },
-    
+
   );
 
- /*  fiche.associate = (models) => {
-    fiche.belongsTo(models.user, {
-      onDelete: "cascade",
-    });
-  }; */
-
+  fiche.associate=models=>{
+      fiche.hasMany(models.vehicule,{
+      onDelete:"cascade"
+      })
+}
   return fiche;
 };
