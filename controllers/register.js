@@ -11,6 +11,9 @@ module.exports.controller = (app) => {
     app.post('/register', function (req, res) {
 
 //nouveaux codes par rapport au frontend
+const fiche=req.body;
+console.log(req.body.fiche);
+        return res.status(201).json(fiche);
     });
 
 function createFiche(req) {
